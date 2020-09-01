@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Title Screen-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="TitleScreen" customModule="QuizzShow" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -92,6 +92,7 @@
                                         <constraint firstItem="LBI-KX-VAc" firstAttribute="centerX" secondItem="ABK-3x-ML9" secondAttribute="centerX" id="Gjj-Yd-765"/>
                                         <constraint firstItem="oct-nc-czr" firstAttribute="centerX" secondItem="ABK-3x-ML9" secondAttribute="centerX" id="LRZ-5z-zYP"/>
                                         <constraint firstItem="oct-nc-czr" firstAttribute="top" secondItem="LBI-KX-VAc" secondAttribute="bottom" constant="15" id="Nmc-vZ-HRX"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="oct-nc-czr" secondAttribute="bottom" constant="7" id="lKw-Hm-a6j"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -119,7 +120,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkn-Ao-KqK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkn-Ao-KqK">
                                 <rect key="frame" x="10" y="150" width="394" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>

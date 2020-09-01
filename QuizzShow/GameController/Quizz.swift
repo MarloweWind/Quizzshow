@@ -56,15 +56,10 @@ class Quizz: UIViewController {
         }
         else {
             
-            let alert = UIAlertController(title: "Awesome", message: "Restar quiz?", preferredStyle: .alert)
-            let restartAction = UIAlertAction(title: "Restar", style: .default, handler:
-            { (UIAlertAction) in
-                self.startOver()
-            })
+            let record = Statistic(date: Date(), score: score)
+            Game.shared.addStatistic(record)
             
-            alert.addAction(restartAction)
-            
-            present(alert, animated: true, completion: nil)
+            dismiss(animated: true, completion: nil)
             
         }
     }
@@ -81,12 +76,6 @@ class Quizz: UIViewController {
         else {
             print("Неправильный ответ")
         }
-    }
-    
-    func startOver() {
-        score = 0
-        questionNumber = 0
-       nextQuestion()
     }
     
 }

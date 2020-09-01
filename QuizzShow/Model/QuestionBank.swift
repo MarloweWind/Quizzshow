@@ -15,7 +15,7 @@ class QuestionBank {
     init() {
         
         
-        let item = Question(text: "Запрещен ли день святого валентина в Саудовской Аравии?", correctAnswer: true)
+        let item = Question(text: "Запрещен ли день святого Валентина в Саудовской Аравии?", correctAnswer: true)
         
         list.append(item)
         
@@ -29,7 +29,7 @@ class QuestionBank {
         
         list.append(Question(text: "Может ли страус закапываться головой в песок?", correctAnswer: false))
         
-        list.append(Question(text: "Рабы стоили египетские пирамиды?", correctAnswer: false))
+        list.append(Question(text: "Строили ли рабы пирамиды в Египте?", correctAnswer: false))
         
         list.append(Question(text: "Вы можете вести корову вниз по лестнице, но не вверх по лестнице?", correctAnswer: false))
         
@@ -37,7 +37,7 @@ class QuestionBank {
         
         list.append(Question(text: "Король Артур был реальным человеком?", correctAnswer: false))
         
-        list.append(Question(text: "Ни один кусок квадратной бумаги не может быть сложен пополам более чем в 7 раз?", correctAnswer: false))
+        list.append(Question(text: "Ни один кусок квадратной бумаги не может быть сложен пополам более 7 раз?", correctAnswer: false))
         
         list.append(Question(text: "Шоколад поражает сердце и нервную систему собаки?", correctAnswer: true))
         
