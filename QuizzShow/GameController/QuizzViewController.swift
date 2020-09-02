@@ -1,5 +1,5 @@
 //
-//  Quizz.swift
+//  QuizzViewController.swift
 //  QuizzShow
 //
 //  Created by Алексей Мальков on 31.08.2020.
@@ -8,12 +8,12 @@
 
 import UIKit
 
-class Quizz: UIViewController {
+class QuizzViewController: UIViewController {
     
     let allQuestions = QuestionBank()
-    var pickedAnswer : Bool = false
-    var questionNumber : Int = 0
-    var score : Int = 0
+    var pickedAnswer: Bool = false
+    var questionNumber: Int = 0
+    var score: Int = 0
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!

@@ -1,5 +1,5 @@
 //
-//  Results.swift
+//  ResultsTableViewController.swift
 //  QuizzShow
 //
 //  Created by Алексей Мальков on 31.08.2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Results: UITableViewController {
+class ResultsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +19,7 @@ class Results: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ResultsCell", for: indexPath) as? ResultsCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ResultsCell", for: indexPath) as? ResultsTableViewCell
 
         let record = Game.shared.statistics[indexPath.row]
         

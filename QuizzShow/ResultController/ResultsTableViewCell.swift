@@ -1,5 +1,5 @@
 //
-//  ResultsCell.swift
+//  ResultsTableViewCell.swift
 //  QuizzShow
 //
 //  Created by Алексей Мальков on 31.08.2020.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ResultsCell: UITableViewCell {
+class ResultsTableViewCell: UITableViewCell {
     
     
     @IBOutlet weak var savedScoreLabel: UILabel!
