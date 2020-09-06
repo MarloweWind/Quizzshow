@@ -22,12 +22,9 @@ class QuizzViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(updateUI), name: NSNotification.Name(rawValue: "scoreNotification"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(scoreTraker), name: NSNotification.Name(rawValue: "scoreNotification"), object: nil)
         
         nextQuestion()
-        
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "scoreNotification"), object: nil)
-        
     }
     
     
@@ -46,18 +43,24 @@ class QuizzViewController: UIViewController {
         nextQuestion()
     }
     
-    @objc func updateUI(){
+    func updateUI(){
         
         scoreLabel.text = "Очков: \(score)"
         questionNumberLabel.text = "Вопрос номер \(questionNumber + 1)"
     }
     
-    func nextQuestion() {
+    @objc func scoreTraker(){
+        print("Очков: \(score)")
+        print("Вопрос номер \(questionNumber + 1)")
+    }
+    
+    func nextQuestion(){
         
         if questionNumber <= 12 {
         questionLabel.text = allQuestions.list[questionNumber].questionText
             
             updateUI()
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "scoreNotification"), object: nil)
         }
         else {
             
@@ -69,7 +72,7 @@ class QuizzViewController: UIViewController {
         }
     }
     
-    func checkAnswer() {
+    func checkAnswer(){
         
         let correctAnswer = allQuestions.list[questionNumber].answer
         
