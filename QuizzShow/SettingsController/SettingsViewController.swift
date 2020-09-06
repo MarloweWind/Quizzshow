@@ -10,7 +10,7 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
-    @IBAction func ShuffleActionControl(_ sender: UISegmentedControl) {
+    @IBAction func shuffleControl(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex{
         case 0:
             Game.shared.shuffleState = false
@@ -21,7 +21,4 @@ class SettingsViewController: UIViewController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
 }

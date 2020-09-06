@@ -141,30 +141,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="HJ0-oO-9kf">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9RB-bQ-ygK">
                                 <rect key="frame" x="154.5" y="191" width="105" height="32"/>
                                 <segments>
                                     <segment title="Выкл"/>
                                     <segment title="Вкл"/>
                                 </segments>
                                 <connections>
-                                    <action selector="ShuffleActionControl:" destination="vqx-3Y-VTO" eventType="valueChanged" id="6Va-1H-1SH"/>
+                                    <action selector="shuffleControl:" destination="vqx-3Y-VTO" eventType="valueChanged" id="43m-Fp-EWI"/>
                                 </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="eTd-Z3-R7T" firstAttribute="top" secondItem="tYS-Gt-gIL" secondAttribute="top" constant="100" id="Isb-O0-p8c"/>
+                            <constraint firstItem="9RB-bQ-ygK" firstAttribute="centerX" secondItem="tYS-Gt-gIL" secondAttribute="centerX" id="WSJ-Dd-KwD"/>
                             <constraint firstItem="eTd-Z3-R7T" firstAttribute="centerX" secondItem="tYS-Gt-gIL" secondAttribute="centerX" id="dMB-5l-JBJ"/>
-                            <constraint firstItem="HJ0-oO-9kf" firstAttribute="top" secondItem="eTd-Z3-R7T" secondAttribute="bottom" constant="40" id="kVN-2U-Ume"/>
-                            <constraint firstItem="HJ0-oO-9kf" firstAttribute="centerX" secondItem="tYS-Gt-gIL" secondAttribute="centerX" id="nL2-Pr-T7u"/>
+                            <constraint firstItem="9RB-bQ-ygK" firstAttribute="top" secondItem="eTd-Z3-R7T" secondAttribute="bottom" constant="40" id="j4m-vB-myT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tYS-Gt-gIL"/>
                     </view>
                     <navigationItem key="navigationItem" id="e9J-CI-o6k"/>
-                    <connections>
-                        <outlet property="ShuffleControl" destination="HJ0-oO-9kf" id="1z8-hv-RqO"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tJj-qJ-AS6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
