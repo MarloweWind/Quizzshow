@@ -14,16 +14,19 @@ class QuizzViewController: UIViewController {
     var pickedAnswer: Bool = false
     var questionNumber: Int = 0
     var score: Int = 0
-    var shuffleState = Game.shared.shuffleState
-    
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var questionNumberLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(updateUI), name: NSNotification.Name(rawValue: "scoreNotification"), object: nil)
+        
         nextQuestion()
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "scoreNotification"), object: nil)
         
     }
     
@@ -43,10 +46,10 @@ class QuizzViewController: UIViewController {
         nextQuestion()
     }
     
-    func updateUI() {
+    @objc func updateUI(){
         
         scoreLabel.text = "Очков: \(score)"
-      
+        questionNumberLabel.text = "Вопрос номер \(questionNumber + 1)"
     }
     
     func nextQuestion() {
