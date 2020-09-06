@@ -29,4 +29,7 @@ class Game{
     func clearStatistic() {
         statistics = []
     }
+    
+    var shuffleState: Bool = false
+    
 }

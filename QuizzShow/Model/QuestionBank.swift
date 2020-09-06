@@ -14,7 +14,6 @@ class QuestionBank {
     
     init() {
         
-        
         let item = Question(text: "Запрещен ли день святого Валентина в Саудовской Аравии?", correctAnswer: true)
         
         list.append(item)
@@ -42,6 +41,11 @@ class QuestionBank {
         list.append(Question(text: "Шоколад поражает сердце и нервную систему собаки?", correctAnswer: true))
         
         list.append(Question(text: "Алкоголь токсичен для кошек?", correctAnswer: true))
+        
+        if Game.shared.shuffleState == true {
+            list.shuffle()
+        } else {
+            return
+        }
     }
-    
 }

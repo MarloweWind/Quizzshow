@@ -14,6 +14,8 @@ class QuizzViewController: UIViewController {
     var pickedAnswer: Bool = false
     var questionNumber: Int = 0
     var score: Int = 0
+    var shuffleState = Game.shared.shuffleState
+    
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!

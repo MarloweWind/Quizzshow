@@ -10,8 +10,8 @@ import Foundation
 
 struct Question {
     
-    let questionText : String
-    let answer : Bool
+    let questionText: String
+    let answer: Bool
     
     init(text: String, correctAnswer: Bool) {
         questionText = text
