@@ -31,5 +31,6 @@ class Game{
     }
     
     var shuffleState: Bool = false
+    var questionNumberState: Int = 0
     
 }
