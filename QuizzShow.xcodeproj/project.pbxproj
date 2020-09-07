@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15261244250642C800423B54 /* UsersQuizzViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15261243250642C800423B54 /* UsersQuizzViewController.swift */; };
+		15261246250645DF00423B54 /* UsersQuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15261245250645DF00423B54 /* UsersQuestionBank.swift */; };
+		15261248250647FE00423B54 /* UsersQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15261247250647FE00423B54 /* UsersQuestion.swift */; };
+		1526124F25064D3700423B54 /* UsersGameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1526124E25064D3700423B54 /* UsersGameSession.swift */; };
 		1529A35124FE753B00FACB8B /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1529A35024FE753B00FACB8B /* Game.swift */; };
 		1529A35324FE754C00FACB8B /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1529A35224FE754C00FACB8B /* GameSession.swift */; };
 		1529A35724FE766200FACB8B /* Statistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1529A35624FE766200FACB8B /* Statistic.swift */; };
@@ -26,6 +30,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		15261243250642C800423B54 /* UsersQuizzViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersQuizzViewController.swift; sourceTree = "<group>"; };
+		15261245250645DF00423B54 /* UsersQuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersQuestionBank.swift; sourceTree = "<group>"; };
+		15261247250647FE00423B54 /* UsersQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersQuestion.swift; sourceTree = "<group>"; };
+		1526124E25064D3700423B54 /* UsersGameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersGameSession.swift; sourceTree = "<group>"; };
 		1529A35024FE753B00FACB8B /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		1529A35224FE754C00FACB8B /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
 		1529A35624FE766200FACB8B /* Statistic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistic.swift; sourceTree = "<group>"; };
@@ -57,10 +65,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1526124B25064CEA00423B54 /* UsersModel */ = {
+			isa = PBXGroup;
+			children = (
+				15261247250647FE00423B54 /* UsersQuestion.swift */,
+				15261245250645DF00423B54 /* UsersQuestionBank.swift */,
+				1526124E25064D3700423B54 /* UsersGameSession.swift */,
+			);
+			path = UsersModel;
+			sourceTree = "<group>";
+		};
 		1529A34D24FE74C200FACB8B /* GameController */ = {
 			isa = PBXGroup;
 			children = (
 				155226A824FD06EE00D71E36 /* QuizzViewController.swift */,
+				15261243250642C800423B54 /* UsersQuizzViewController.swift */,
 			);
 			path = GameController;
 			sourceTree = "<group>";
@@ -100,6 +119,7 @@
 				1529A34F24FE750C00FACB8B /* ResultController */,
 				15E962F12503A4F2009B111F /* SettingsController */,
 				155226B024FD38B100D71E36 /* Model */,
+				1526124B25064CEA00423B54 /* UsersModel */,
 				1552269824FCFF1A00D71E36 /* Main.storyboard */,
 				1552269B24FCFF2200D71E36 /* Assets.xcassets */,
 				1552269D24FCFF2200D71E36 /* LaunchScreen.storyboard */,
@@ -200,12 +220,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15261246250645DF00423B54 /* UsersQuestionBank.swift in Sources */,
 				1552269324FCFF1A00D71E36 /* AppDelegate.swift in Sources */,
 				1529A35124FE753B00FACB8B /* Game.swift in Sources */,
 				15E962F72503B0A6009B111F /* TitleScreenViewController.swift in Sources */,
+				15261244250642C800423B54 /* UsersQuizzViewController.swift in Sources */,
 				15E962F32503A52F009B111F /* SettingsViewController.swift in Sources */,
+				1526124F25064D3700423B54 /* UsersGameSession.swift in Sources */,
 				1529A35324FE754C00FACB8B /* GameSession.swift in Sources */,
 				155226B424FD394700D71E36 /* QuestionBank.swift in Sources */,
+				15261248250647FE00423B54 /* UsersQuestion.swift in Sources */,
 				155226A924FD06EE00D71E36 /* QuizzViewController.swift in Sources */,
 				155226AF24FD078500D71E36 /* ResultsTableViewCell.swift in Sources */,
 				1529A35724FE766200FACB8B /* Statistic.swift in Sources */,

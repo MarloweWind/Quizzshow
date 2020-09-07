@@ -22,7 +22,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Zb-2f-Tjc">
-                                <rect key="frame" x="142.5" y="432" width="129" height="42"/>
+                                <rect key="frame" x="142.5" y="332" width="129" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Результаты">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -32,7 +32,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejA-VJ-QZ5">
-                                <rect key="frame" x="138" y="340" width="138" height="42"/>
+                                <rect key="frame" x="138" y="240" width="138" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="Начать игру">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -42,7 +42,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5s-Rg-ag2">
-                                <rect key="frame" x="156.5" y="524" width="101" height="36"/>
+                                <rect key="frame" x="156.5" y="424" width="101" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Настройки">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -52,13 +52,23 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="To5-8I-vGl">
-                                <rect key="frame" x="103.5" y="610" width="207" height="36"/>
+                                <rect key="frame" x="103.5" y="510" width="207" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Добавить свой вопрос">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="n8h-7X-wn8" kind="show" id="NHv-qu-0Un"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFx-wN-Z2H">
+                                <rect key="frame" x="54" y="591" width="306" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Начать игру с своими вопросами">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="0Fq-2x-KEK" kind="show" id="SgB-CI-G8J"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -70,9 +80,11 @@
                             <constraint firstItem="XLT-PV-wJA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="HNt-pH-dcW"/>
                             <constraint firstItem="5Zb-2f-Tjc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="O78-WH-VeD"/>
                             <constraint firstItem="XLT-PV-wJA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ts0-fn-5HN"/>
+                            <constraint firstItem="XFx-wN-Z2H" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="WsD-2A-XWO"/>
                             <constraint firstItem="5Zb-2f-Tjc" firstAttribute="top" secondItem="ejA-VJ-QZ5" secondAttribute="bottom" constant="50" id="Wsd-VG-8QL"/>
-                            <constraint firstItem="ejA-VJ-QZ5" firstAttribute="top" secondItem="XLT-PV-wJA" secondAttribute="bottom" constant="200" id="ic2-YW-grp"/>
+                            <constraint firstItem="ejA-VJ-QZ5" firstAttribute="top" secondItem="XLT-PV-wJA" secondAttribute="bottom" constant="100" id="ic2-YW-grp"/>
                             <constraint firstItem="To5-8I-vGl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="l20-SB-XZE"/>
+                            <constraint firstItem="XFx-wN-Z2H" firstAttribute="top" secondItem="To5-8I-vGl" secondAttribute="bottom" constant="45" id="lip-HY-lfn"/>
                             <constraint firstItem="B5s-Rg-ag2" firstAttribute="top" secondItem="5Zb-2f-Tjc" secondAttribute="bottom" constant="50" id="plH-5l-1AT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -320,7 +332,94 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qb9-Uv-KHB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="912" y="-1014"/>
+            <point key="canvasLocation" x="912" y="-998"/>
+        </scene>
+        <!--Users Quizz View Controller-->
+        <scene sceneID="CxD-HX-Qfm">
+            <objects>
+                <viewController id="0Fq-2x-KEK" customClass="UsersQuizzViewController" customModule="QuizzShow" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uj8-xB-lPA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZy-A4-K2s">
+                                <rect key="frame" x="10" y="150" width="394" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFf-ac-NDU">
+                                <rect key="frame" x="50" y="638" width="120" height="70"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="5T2-FS-bhJ"/>
+                                    <constraint firstAttribute="width" constant="120" id="hIF-uW-HKR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Верно">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="answerPressed:" destination="0Fq-2x-KEK" eventType="touchUpInside" id="Nq5-OJ-fx7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZm-iS-yYC">
+                                <rect key="frame" x="244" y="638" width="120" height="70"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="HJW-kH-rVE"/>
+                                    <constraint firstAttribute="height" constant="70" id="L7g-z7-Dg6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Неверно">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="answerPressed:" destination="0Fq-2x-KEK" eventType="touchUpInside" id="U4l-vc-mZn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Очки: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1E-TX-ffU">
+                                <rect key="frame" x="323.5" y="758" width="60.5" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="1dT-Ql-6O9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос номер хх" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXR-cf-QBk">
+                                <rect key="frame" x="20" y="20" width="138" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FRX-ka-IzJ" firstAttribute="trailing" secondItem="e1E-TX-ffU" secondAttribute="trailing" constant="30" id="0bs-gL-kE1"/>
+                            <constraint firstItem="KFf-ac-NDU" firstAttribute="leading" secondItem="FRX-ka-IzJ" secondAttribute="leading" constant="50" id="4fi-5g-Bk5"/>
+                            <constraint firstItem="FRX-ka-IzJ" firstAttribute="bottom" secondItem="KFf-ac-NDU" secondAttribute="bottom" constant="100" id="DLY-Eb-qnd"/>
+                            <constraint firstItem="FRX-ka-IzJ" firstAttribute="bottom" secondItem="OZm-iS-yYC" secondAttribute="bottom" constant="100" id="K2y-5N-qz2"/>
+                            <constraint firstItem="hXR-cf-QBk" firstAttribute="top" secondItem="FRX-ka-IzJ" secondAttribute="top" constant="20" id="OB7-ZQ-bky"/>
+                            <constraint firstItem="FRX-ka-IzJ" firstAttribute="trailing" secondItem="OZm-iS-yYC" secondAttribute="trailing" constant="50" id="PVk-fh-bfb"/>
+                            <constraint firstItem="eZy-A4-K2s" firstAttribute="top" secondItem="FRX-ka-IzJ" secondAttribute="top" constant="150" id="b2b-JH-3rb"/>
+                            <constraint firstItem="hXR-cf-QBk" firstAttribute="leading" secondItem="FRX-ka-IzJ" secondAttribute="leading" constant="20" id="eXu-Oi-Rvg"/>
+                            <constraint firstItem="eZy-A4-K2s" firstAttribute="leading" secondItem="FRX-ka-IzJ" secondAttribute="leading" constant="10" id="fv6-BX-JtJ"/>
+                            <constraint firstItem="FRX-ka-IzJ" firstAttribute="bottom" secondItem="e1E-TX-ffU" secondAttribute="bottom" constant="25" id="ru2-iB-fWo"/>
+                            <constraint firstItem="FRX-ka-IzJ" firstAttribute="trailing" secondItem="eZy-A4-K2s" secondAttribute="trailing" constant="10" id="trZ-te-0Fe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FRX-ka-IzJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TKp-qS-Ehs"/>
+                    <connections>
+                        <outlet property="questionLabel" destination="eZy-A4-K2s" id="M1x-Ji-EY3"/>
+                        <outlet property="questionNumberLabel" destination="hXR-cf-QBk" id="TdE-vO-qUx"/>
+                        <outlet property="scoreLabel" destination="e1E-TX-ffU" id="TJU-A5-GJM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gni-xK-vac" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="912" y="-1668"/>
         </scene>
     </scenes>
 </document>

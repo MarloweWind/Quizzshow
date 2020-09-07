@@ -10,7 +10,6 @@ import UIKit
 
 class AddQuestionViewController: UIViewController {
 
-    var questionBank = QuestionBank.shared
     var answer: Bool = true
     var questionNumberState = Game.shared.questionNumberState
     
@@ -28,13 +27,15 @@ class AddQuestionViewController: UIViewController {
     }
     
     @IBAction func addQuestionButton(_ sender: UIButton) {
-        questionBank.list.append(Question(text: addQuestionTextField.text!, correctAnswer: answer))
-
-            questionNumberState += 1
+        
+        UsersGameSession.shared.answer = answer
+        
+        UsersGameSession.shared.questionText = addQuestionTextField.text!
+        
+        questionNumberState += 1
 
         dismiss(animated: true, completion: nil)
-        print(questionBank.list)
-        print(questionNumberState)
+
     }
     
 }

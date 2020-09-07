@@ -11,7 +11,6 @@ import Foundation
 class QuestionBank {
     
     var list = [Question]()
-    public static var shared = QuestionBank()
     
     init() {
         

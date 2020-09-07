@@ -10,11 +10,10 @@ import UIKit
 
 class QuizzViewController: UIViewController {
     
-    let allQuestions = QuestionBank.shared
+    let allQuestions = QuestionBank()
     var pickedAnswer: Bool = false
     var questionNumber: Int = 0
     var score: Int = 0
-    var questionNumberState = Game.shared.questionNumberState
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -57,12 +56,10 @@ class QuizzViewController: UIViewController {
     
     func nextQuestion(){
         
-        if questionNumber <= questionNumberState + 12 {
+        if questionNumber <= 12 {
         questionLabel.text = allQuestions.list[questionNumber].questionText
-            print("тут \(questionNumberState)")
             updateUI()
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "scoreNotification"), object: nil)
-            print(allQuestions.list)
         }
         else {
             
